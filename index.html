@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIFAS</title>
-    <link rel="stylesheet" href="indexa.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SuperGol - Mini Fútbol Top-Down</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <section id="seleccionar-equipo">
-        <center><h1 class="titulo">FIFAS</h1></center>
-        <br> 
-        <center><h2 class="subtitulo">Elige tu Equipo:</h2></center>
-        <div id='contenedorTarjetas' class="tarjetas">
-        </div>
+  <header>
+    <h1>⚽ SuperGol</h1>
+    <p>Vista superior — Jugador1: W A S D | Jugador2: ↑ ← ↓ →</p>
+    <div class="controls">
+      <button id="startBtn">Iniciar partido</button>
+      <button id="resetBtn">Reiniciar marcador</button>
+      <button id="pauseBtn">Pausar</button>
+      <label class="time-label">Tiempo: <span id="time">120</span>s</label>
+      <label class="score-label">Marcador: <span id="score">0 - 0</span></label>
+    </div>
+  </header>
 
-        <center><img src="./Imagenes/equipoazul.png" width="80"  height="80"> <img src="./Imagenes/equiporojo.webp" width="80" height="80"></center>
-        <center><button id="boton-equipo">Seleccionar</button></center>
-    </section>
+  <main>
+    <canvas id="gameCanvas" width="1000" height="560"></canvas>
+  </main>
 
-    <section id="vista-mapa">
-        <canvas id="mapa"></canvas>
-        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
-        <div>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
-        </div>
-    </section>
+  <footer>
+    <small>SuperGol</small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
